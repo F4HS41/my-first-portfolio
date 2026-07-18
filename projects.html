@@ -101,6 +101,47 @@
             </div>
         </div>
 
+
+        <h2 style="color: #1e3a8a; border-bottom: 2px solid #3b82f6; padding-bottom: 5px; margin-top: 40px;">💻 ชิ้นงานพัฒนาทักษะเทคโนโลยี (Programming Section)</h2>
+
+        <div class="card" id="python-code-section">
+            <div style="background-color: #0f172a; padding: 20px; color: #38bdf8; font-family: 'Courier New', Courier, monospace; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div style="color: #64748b; margin-bottom: 10px; font-size: 9pt;">📄 rectangle_calculator.py (โค้ดฉบับปรับปรุงต่อยอดไอเดีย)</div>
+<pre style="margin: 0; white-space: pre-wrap; font-size: 10pt; line-height: 1.5; color: #f1f5f9;">
+<span style="color: #64748b;"># โปรแกรมคำนวณพื้นที่สี่เหลี่ยมผืนผ้า (ฉบับปรับปรุงต่อยอดไอเดีย)</span>
+<span style="color: #f43f5e;">def</span> <span style="color: #38bdf8;">calculate_rectangle_area</span>():
+    print(<span style="color: #34d399;">"=== โปรแกรมคำนวณพื้นที่สี่เหลี่ยมผืนผ้า ==="</span>)
+    
+    <span style="color: #64748b;"># ปรับปรุง: เพิ่มระบบดักจับข้อผิดพลาด (Try-Except) ป้องกันโปรแกรมค้างหากป้อนไม่ใช่ตัวเลข</span>
+    <span style="color: #f43f5e;">try</span>:
+        width = float(input(<span style="color: #34d399;">"ป้อนความกว้าง (เซนติเมตร): "</span>))
+        length = float(input(<span style="color: #34d399;">"ป้อนความยาว (เซนติเมตร): "</span>))
+        
+        <span style="color: #64748b;"># ปรับปรุง: เพิ่มเงื่อนไขตรวจสอบ ห้ามค่าติดลบหรือเป็นศูนย์</span>
+        <span style="color: #f43f5e;">if</span> width <= 0 <span style="color: #f43f5e;">or</span> length <= 0:
+            print(<span style="color: #f43f5e;">"❌ ข้อผิดพลาด: ค่าความกว้างและความยาวต้องมากกว่า 0!"</span>)
+        <span style="color: #f43f5e;">else</span>:
+            area = width * length
+            print(<span style="color: #34d399;">"----------------------------------------"</span>)
+            print(f<span style="color: #34d399;">"✨ พื้นที่สี่เหลี่ยมผืนผ้าคือ: {area:.2f} ตารางเซนติเมตร"</span>)
+            print(<span style="color: #34d399;">"----------------------------------------"</span>)
+            
+    <span style="color: #f43f5e;">except</span> ValueError:
+        print(<span style="color: #f43f5e;">"❌ ข้อผิดพลาด: กรุณากรอกข้อมูลเป็นตัวเลขเท่านั้น!"</span>)
+
+<span style="color: #64748b;"># เรียกใช้งานฟังก์ชัน</span>
+calculate_rectangle_area()
+</pre>
+            </div>
+            
+            <div class="card-body">
+                <h2>💡 ไอเดียการพัฒนาต่อยอดโค้ดคอมพิวเตอร์</h2>
+                <p><strong>แนวคิดการปรับปรุงแก้ไข (Code Optimization):</strong> จากใบงานเดิมที่มีเพียงการคำนวณพื้นฐาน ข้าพเจ้าได้ทำการต่อยอดโดยการเพิ่มระบบ <strong>Exception Handling (Try-Except)</strong> เพื่อป้องกันกรณีที่ผู้ใช้ป้อนอักขระที่ไม่ใช่ตัวเลข ซึ่งจะช่วยลดโอกาสที่โปรแกรมจะเกิดข้อผิดพลาดรุนแรง (Crash)</p>
+                <p>นอกจากนี้ยังเพิ่มระบบ <strong>Validation Check</strong> เพื่อตรวจสอบไม่ให้ค่าความกว้างและความยาวติดลบหรือเป็นศูนย์ ซึ่งช่วยให้ผลลัพธ์การประมวลผลมีความถูกต้องตามหลักคณิตศาสตร์และความจริงมากยิ่งขึ้น ช่วยฝึกกระบวนการคิดเชิงตรรกะแบบเป็นลำดับขั้นตอน (Algorithmic Thinking) ได้เป็นอย่างดีค่ะ</p>
+                <span class="tech-stack">Python 3</span> <span class="tech-stack">Code Optimization</span> <span class="tech-stack">Logic Control</span>
+            </div>
+        </div>
+
     </main>
 
     <footer>
