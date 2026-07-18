@@ -1,23 +1,93 @@
+/* ================= 1. ตั้งค่าพื้นฐานของหน้าเว็บ ================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0;
-    background-color: #f1f5f9; color: #334155;
+    margin: 0; 
+    padding: 0;
+    background-color: #f8fafc; 
+    color: #1e293b;
     line-height: 1.6;
 }
+
 .container {
-    max-width: 800px; margin: 40px auto; padding: 25px;
-    background-color: #ffffff; border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 850px; 
+    margin: 40px auto; 
+    padding: 30px;
+    background-color: #ffffff; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-header { background-color: #0f172a; padding: 15px 0; text-align: center; }
-nav a { color: #94a3b8; text-decoration: none; margin: 0 15px; font-weight: 600; }
-nav a:hover, nav a.active { color: #3b82f6; }
-.profile-area { text-align: center; padding: 20px 0; }
-.profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #3b82f6; margin-bottom: 15px; }
-.tagline { color: #64748b; margin-top: -5px; }
-.content-section { margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
-.card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; margin-top: 25px; overflow: hidden; }
-.card-img { width: 100%; height: auto; max-height: 300px; object-fit: cover; }
-.card-body { padding: 20px; }
-.tech-stack { display: inline-block; background-color: #f1f5f9; color: #475569; padding: 4px 10px; border-radius: 4px; font-size: 9pt; font-weight: bold; }
-footer { text-align: center; padding: 25px; color: #64748b; font-size: 9pt; }
+
+/* ================= 2. ส่วนหัวและเมนูบาร์ (Navbar) ================= */
+header { 
+    background-color: #0f172a; 
+    padding: 18px 0; 
+    text-align: center; 
+}
+
+nav a { 
+    color: #94a3b8; 
+    text-decoration: none; 
+    margin: 0 20px; 
+    font-weight: 600; 
+    font-size: 11pt; 
+    transition: color 0.3s; 
+}
+
+nav a:hover, nav a.active { 
+    color: #3b82f6; 
+}
+
+/* ================= 3. ส่วนแสดงข้อมูลผลงาน (Cards) ================= */
+.card { 
+    background: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 10px; 
+    margin-top: 25px; 
+    margin-bottom: 25px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02); 
+}
+
+.card-body { 
+    padding: 25px; 
+}
+
+.card-body h2 { 
+    font-size: 14pt; 
+    margin-top: 0; 
+    color: #0f172a; 
+}
+
+/* ================= 4. การจัดการรูปภาพ (สำคัญมาก) ================= */
+/* สำหรับรูปเกียรติบัตรเดี่ยวๆ ให้ขยายเต็มการ์ดและไม่บีบอัดรูป */
+.card-img { 
+    width: 100%; 
+    height: auto; 
+    max-height: 450px; 
+    object-fit: contain; /* ป้องกันไม่ให้รูปเกียรติบัตรโดนตัดขอบ */
+    background-color: #f8fafc; 
+    display: block;
+}
+
+/* ตกแต่งแท็กสะสมทักษะด้านล่างผลงาน */
+.tech-stack { 
+    display: inline-block; 
+    background-color: #eff6ff; 
+    color: #1d4ed8; 
+    padding: 5px 12px; 
+    border-radius: 6px; 
+    font-size: 9pt; 
+    font-weight: 600; 
+    margin-right: 8px; 
+    margin-top: 10px; 
+}
+
+/* ================= 5. ส่วนท้ายหน้าเว็บ ================= */
+footer { 
+    text-align: center; 
+    padding: 30px; 
+    color: #64748b; 
+    font-size: 9.5pt; 
+    border-top: 1px solid #e2e8f0; 
+    margin-top: 40px; 
+}
